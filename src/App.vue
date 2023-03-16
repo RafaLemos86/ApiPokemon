@@ -1,10 +1,22 @@
 <template>
-  <div v-for="(poke, index) in pokemons" :key="index">
+  <div class="column is-half is-offset-one-quarter">
+    <h1 class="title">Criado Por:</h1>
+  <h2 class="subtitle"> 
+    <a href="https://www.linkedin.com/in/rafael-lemos-a433a31a1/" style="color: black;"  target="_blank">
+    Rafael Lemos
+    </a>
+  </h2>
+
+    <div v-for="(poke, index) in pokemons" :key="index">
       <AllPokemons :name="poke.name" :url="poke.url" :num="index"/> 
+      <br>
+    </div>
+
   </div>
 </template>
 
 <script>
+// axios para consumir API
 import axios from 'axios';
 import AllPokemons from './components/AllPokemons.vue';
 
@@ -40,5 +52,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 </style>
