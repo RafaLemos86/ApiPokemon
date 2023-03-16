@@ -1,20 +1,23 @@
 <template>
   <div v-for="(poke, index) in pokemons" :key="index">
-      <pokemon :name="poke.name" :url="poke.url" :num="poke.num"/> 
+      <AllPokemons :name="poke.name" :url="poke.url" :num="index"/> 
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-import pokemon from './components/pokemon.vue';
+import AllPokemons from './components/AllPokemons.vue';
 
 export default {
   name: 'App',
   data(){
     return {
+      // inicializando lista de pokemons
       pokemons: []
     }
   },  
+  // essa funcao é executada sempre que o codigo inicia
+  // coletando os pokemons da API e inserindo na lista "pokemons"
   created: function(){
     axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0').then(res => {
       this.pokemons = res.data.results
@@ -23,8 +26,9 @@ export default {
     })
   },
   components: {
-    pokemon
+    AllPokemons
   }
+
 }
 </script>
 
