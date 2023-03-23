@@ -1,5 +1,7 @@
 # pokemonvue
 
+Consumindo a API "pokeapi.co"
+
 ## Project setup
 ```
 npm install
