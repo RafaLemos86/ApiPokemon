@@ -8,7 +8,7 @@
 
 Este é um projeto pessoal no qual utilizei a API de PokeApi e desenvolvi a parte do Front-End utilizando a biblioteca Vue.js.
 
-## :white_check_mark: Tecnologias Utilizadas
+## :white_check_mark: Principais Tecnologias Utilizadas
 
 - Vue.js
 * Javascript
